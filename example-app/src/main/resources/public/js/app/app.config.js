@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: "/example/static/js",
+  baseUrl: "./js",
   urlArgs: "bust=" + new Date().getTime(),
   paths: {
     "angular": "lib/angular",
@@ -18,6 +18,7 @@ require.config({
 
     //Directives
     "directive1": "app/directive/directive1",
+    "format": "app/directive/format",
 
     //Services
     "service1": "app/services/service1",
@@ -26,13 +27,15 @@ require.config({
 
     //Factories
     "factory1": "app/factory/factory1",
+    "angular-dynamic-locale" : "bower_components/angular-dynamic-locale/src/tmhDynamicLocale",
   },
   shim: {
     "ng-i18n": {deps: ["angular"], exports: "i18n"},
     'underscore': {exports: '_'},
     'angular': {exports: 'angular'},
     'jquery': {exports: '$'},
-    'angular-route': { deps: ["angular"], exports: 'angular_route'}
+    'angular-route': { deps: ["angular"], exports: 'angular_route'},
+    'angular-dynamic-locale': { deps: ["angular"], exports: 'angular-dynamic-locale'},
   },
   deps: []
 });

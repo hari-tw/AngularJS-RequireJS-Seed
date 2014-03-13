@@ -1,6 +1,6 @@
 require.config(
   {
-    baseUrl: "/example/static/js",
+    baseUrl: "./js",
     paths: {
       "test-setup": "test/unit/test-setup",
       angular: "lib/angular",

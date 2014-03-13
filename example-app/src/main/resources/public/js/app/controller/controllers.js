@@ -5,7 +5,7 @@ define(["route1-controller",
     var init = function (app) {
       app.controller('route1Controller', ['$scope', 'service1', '$q', route1Ctrl]);
       app.controller('route2Controller', ['$scope', '$location', '$q', 'service2', route2Ctrl]);
-      app.controller('navigationController', ['$scope', '$location', navigationCtrl]);
+      app.controller('navigationController', ['$scope', '$location','tmhDynamicLocale', navigationCtrl]);
   };
   return {init: init};
 });
